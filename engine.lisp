@@ -12,6 +12,9 @@
   (dotimes (i (length board))
     (print-items (nth i board))))
 
+	
+	
+	
 (defun place-tok (board col player)
   (if (not(null (nth col (first (last board)))))
 	  (place-tok (butlast board) col player ) (setf (nth col (first (last board))) player)))
