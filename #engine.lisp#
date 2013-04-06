@@ -1,0 +1,10 @@
+
+
+(defun print-items (items)
+(mapcar (lambda (item) (if (null item)(format t "| - ") (format t "| ~A " item))) items)
+(format t "|~%"))
+
+(defun print-matrix (board)
+  (dotimes (i (length board))
+    (print-items (nth i board))))
+

@@ -1,0 +1,1 @@
+this is for kurmasz 352
