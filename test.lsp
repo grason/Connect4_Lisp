@@ -33,5 +33,4 @@
               ("row 0 length 5" 7 7 5 (1 1 2 2 3 3 4 4 5))
               ("column 0" 7 7 4 (0 1 0 1 0 1 0))
               ("forward diagonal" 7 7 4 (0 0 0 0 2 2 2 1 1 1 1 3))
-              ))
-
+              ("backward diagonal" 6 6 4 (0 1 1 2 2 3 2 3 3 5 3 ))))

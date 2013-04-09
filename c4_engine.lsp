@@ -47,7 +47,7 @@
 (defun x-in-a-row(lst to-win)
 	(x-in-a-row-h lst to-win 0 nil))
 
-(defun who-won(board to-win)
+(defun who-won(to-win board)
 	(loop for i in (concat-board board) do 
 		(if (x-in-a-row i to-win)
 		(return-from who-won (x-in-a-row i to-win))))

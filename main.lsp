@@ -3,7 +3,7 @@
 	(format t "Player ~D, make a move:" player)
 	(place-token player (read) board )
 	(print-matrix board)	
-	(if (who-won board '4) 
+	(if (who-won '4 board ) 
 		(format t "Player ~D is the victor!" player)
 	(main-h board (mod (+ player 1) 2))))
 
