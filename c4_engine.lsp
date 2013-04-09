@@ -55,7 +55,7 @@
 	(diag-transform-down-top (reverse board)))
 
 (defun diag-transform-up-bot (board)
-	(diag-transform-down-top (reverse board)))			 
+	(diag-transform-down-bot (reverse board)))			 
 
 (defun x-in-a-row-h(lst to-win cnt plr)
 	(if (eq cnt to-win) (return-from x-in-a-row-h plr))
@@ -63,8 +63,20 @@
 		(x-in-a-row-h (rest lst) to-win (+ 1 cnt) plr)
 		(x-in-a-row-h (rest lst) to-win 1 (first lst)))
 )
+(defun concat-board (board)
+	(concatenate 'list board (vert-transform board) (diag-transform-up-top board) 
+	(diag-transform-up-bot board) (diag-transform-down-bot board) (diag-transform-down-top board))
+)
+
+
 (defun x-in-a-row(lst to-win)
-	(x-in-a-row lst to-win 0 -1 ))
+	(x-in-a-row lst to-win 0 nil))
+
+;(defun winner(board to-win)
+;	(loop for i in board do 
+;		(if (x-in-a-row i to-win)
+;		(return-from winner (x-in-a-row i to-win))))
+;	(loop for i in 
 	
 (defun who-won (win board)
 	(let ((winner nil))
