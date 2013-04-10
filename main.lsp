@@ -1,4 +1,4 @@
-;this is still in progress. 	
+;Grason and Knapps lisp project
 (defun main-h (board player)
 	(format t "Player ~D, make a move:" player)
 	(place-token player (read) board )
